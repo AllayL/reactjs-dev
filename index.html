@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Reactjs Dev</title>
+        <meta name="description" content="">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+        <!-- Title is needed to trigger loading entonejs -->
+    </head>
+    <body>
+        <div class="container">
+            <div class="page-header">
+                <h1>Reactjs Demo Page:</h1>
+                <h2 id="helloMsg"></h2>
+            </div>
+        </div>
+    </body>
+    <!-- The core React library -->
+    <script src="http://fb.me/react-0.12.2.js"></script>
+    <!-- In-browser JSX transformer, remove when pre-compiling JSX. -->
+    <script src="http://fb.me/JSXTransformer-0.12.2.js"></script>
+    <script type="text/jsx">
+        var HelloMessage = React.createClass({
+            render: function() {
+                return <small>Hello {this.props.name}!</small>;
+            }
+        });
+
+        React.render(
+        <HelloMessage name="ReactJS" />,
+        document.getElementById('helloMsg')
+        );
+    </script>
+</html>
+
